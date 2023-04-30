@@ -1,0 +1,208 @@
+{
+  "id": "408c386d-d18f-4ffd-b04a-7cb39a6ed4c8",
+  "version": "2.0",
+  "name": "integration_test",
+  "url": "https://www.wikipedia.org",
+  "tests": [{
+    "id": "67872924-37c3-49b0-9a09-f46965125a23",
+    "name": "Wikipedia",
+    "commands": [{
+      "id": "98908fa6-663c-46a9-923f-c38902a63998",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "25e5a4e1-eaf1-4984-a006-576ed2e8366b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "772x638",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f30f93cb-3da5-4294-a349-b57c2e802c5b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#js-link-box-de > strong",
+      "targets": [
+        ["css=#js-link-box-de > strong", "css:finder"],
+        ["xpath=//a[@id='js-link-box-de']/strong", "xpath:idRelative"],
+        ["xpath=//a/strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'Deutsch')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ad46ad5-4dd8-45b0-9777-1ed9120a885b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hauptseite-absatz",
+      "targets": [
+        ["css=.hauptseite-absatz", "css:finder"],
+        ["xpath=//div[@id='willkommen']/div[2]/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Wikipedia ist ein Projekt zum Aufbau einer Enzyklopädie aus freien Inhalten, zu denen du sehr gern beitragen kannst. Seit März 2001 sind 2.796.243 Artikel in deutscher Sprache entstanden.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "56bb40af-35bd-40df-942d-641cdf2ae9df",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.hauptseite-absatz",
+      "targets": [
+        ["css=.hauptseite-absatz", "css:finder"],
+        ["xpath=//div[@id='willkommen']/div[2]/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Wikipedia ist ein Projekt zum Aufbau einer Enzyklopädie aus freien Inhalten, zu denen du sehr gern beitragen kannst. Seit März 2001 sind 2.796.243 Artikel in deutscher Sprache entstanden.')]", "xpath:innerText"]
+      ],
+      "value": "Wikipedia ist ein Projekt zum Aufbau einer Enzyklopädie aus freien Inhalten, zu denen du sehr gern beitragen kannst. Seit März 2001 sind 2.796.243 Artikel in deutscher Sprache entstanden."
+    }]
+  }, {
+    "id": "60510762-483a-42e0-82e3-d529153e5cc0",
+    "name": "Wikipedia_1",
+    "commands": [{
+      "id": "9273d898-5cce-4266-b4ce-2ad31611e709",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf9c5bf2-9fda-4587-8efd-c2d0081db2ec",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "774x642",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bacf4c6-f463-493e-b414-5b637b311f56",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchInput",
+      "targets": [
+        ["id=searchInput", "id"],
+        ["name=search", "name"],
+        ["css=#searchInput", "css:finder"],
+        ["xpath=//input[@id='searchInput']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "wirtschaftsinformatik"
+    }, {
+      "id": "3fe8c989-2371-43ce-92d3-10bcb09e0403",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=searchInput",
+      "targets": [
+        ["id=searchInput", "id"],
+        ["name=search", "name"],
+        ["css=#searchInput", "css:finder"],
+        ["xpath=//input[@id='searchInput']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "d7bc0e1a-8817-48f3-b4ef-da9fa844b7d3",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Business & Information Systems Engineering",
+      "targets": [
+        ["linkText=Business & Information Systems Engineering", "linkText"],
+        ["css=#Vorlage_Dieser_Artikel a", "css:finder"],
+        ["xpath=//a[contains(text(),'Business & Information Systems Engineering')]", "xpath:link"],
+        ["xpath=//div[@id='Vorlage_Dieser_Artikel']/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/wiki/Business_%26_Information_Systems_Engineering')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Business & Information Systems Engineering')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae304f49-6997-411f-9fb5-080932a06da4",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Business & Information Systems Engineering",
+      "targets": [
+        ["linkText=Business & Information Systems Engineering", "linkText"],
+        ["css=#Vorlage_Dieser_Artikel a", "css:finder"],
+        ["xpath=//a[contains(text(),'Business & Information Systems Engineering')]", "xpath:link"],
+        ["xpath=//div[@id='Vorlage_Dieser_Artikel']/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/wiki/Business_%26_Information_Systems_Engineering')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Business & Information Systems Engineering')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "db246fb8-06de-4532-85ee-596e01f37732",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Wirtschaftsinformatik – Wikipedia",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7a48b3f9-cae8-4df3-bf21-c3ab792e3d9d",
+    "name": "Wikipedia_2",
+    "commands": [{
+      "id": "6533cc67-0fd5-4ad3-9001-e763e300d601",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d9dd02a-6cd2-46ad-8bde-fe0acefaa152",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "772x638",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c51a7222-9e5e-452d-a5a6-7dacce6a232b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#js-link-box-de > strong",
+      "targets": [
+        ["css=#js-link-box-de > strong", "css:finder"],
+        ["xpath=//a[@id='js-link-box-de']/strong", "xpath:idRelative"],
+        ["xpath=//a/strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'Deutsch')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2bbc41ec-92e1-4d79-b0cf-742ce241fc33",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hauptseite-absatz",
+      "targets": [
+        ["css=.hauptseite-absatz", "css:finder"],
+        ["xpath=//div[@id='willkommen']/div[2]/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Wikipedia ist ein Projekt zum Aufbau einer Enzyklopädie aus freien Inhalten, zu denen du sehr gern beitragen kannst. Seit März 2001 sind 2.796.243 Artikel in deutscher Sprache entstanden.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "deed4b57-0f73-40a6-bb2c-4587c66dc505",
+      "comment": "",
+      "command": "assertText",
+      "target": "project",
+      "targets": [
+        ["css=.hauptseite-absatz", "css:finder"],
+        ["xpath=//div[@id='willkommen']/div[2]/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Wikipedia ist ein Projekt zum Aufbau einer Enzyklopädie aus freien Inhalten, zu denen du sehr gern beitragen kannst. Seit März 2001 sind 2.796.243 Artikel in deutscher Sprache entstanden.')]", "xpath:innerText"]
+      ],
+      "value": "Wikipedia ist ein Projekt zum Aufbau einer Enzyklopädie aus freien Inhalten, zu denen du sehr gern beitragen kannst. Seit März 2001 sind 2.796.243 Artikel in deutscher Sprache entstanden."
+    }]
+  }],
+  "suites": [{
+    "id": "98cd0ffa-0692-4fb1-b74e-6d2024b8c774",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["67872924-37c3-49b0-9a09-f46965125a23"]
+  }],
+  "urls": ["https://www.wikipedia.org/"],
+  "plugins": []
+}

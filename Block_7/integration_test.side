@@ -1,0 +1,71 @@
+{
+  "id": "408c386d-d18f-4ffd-b04a-7cb39a6ed4c8",
+  "version": "2.0",
+  "name": "integration_test",
+  "url": "https://www.wikipedia.org",
+  "tests": [{
+    "id": "67872924-37c3-49b0-9a09-f46965125a23",
+    "name": "Wikipedia",
+    "commands": [{
+      "id": "98908fa6-663c-46a9-923f-c38902a63998",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "25e5a4e1-eaf1-4984-a006-576ed2e8366b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "772x638",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f30f93cb-3da5-4294-a349-b57c2e802c5b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#js-link-box-de > strong",
+      "targets": [
+        ["css=#js-link-box-de > strong", "css:finder"],
+        ["xpath=//a[@id='js-link-box-de']/strong", "xpath:idRelative"],
+        ["xpath=//a/strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'Deutsch')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ad46ad5-4dd8-45b0-9777-1ed9120a885b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hauptseite-absatz",
+      "targets": [
+        ["css=.hauptseite-absatz", "css:finder"],
+        ["xpath=//div[@id='willkommen']/div[2]/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Wikipedia ist ein Projekt zum Aufbau einer Enzyklopädie aus freien Inhalten, zu denen du sehr gern beitragen kannst. Seit März 2001 sind 2.796.243 Artikel in deutscher Sprache entstanden.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "56bb40af-35bd-40df-942d-641cdf2ae9df",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.hauptseite-absatz",
+      "targets": [
+        ["css=.hauptseite-absatz", "css:finder"],
+        ["xpath=//div[@id='willkommen']/div[2]/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Wikipedia ist ein Projekt zum Aufbau einer Enzyklopädie aus freien Inhalten, zu denen du sehr gern beitragen kannst. Seit März 2001 sind 2.796.243 Artikel in deutscher Sprache entstanden.')]", "xpath:innerText"]
+      ],
+      "value": "Wikipedia ist ein Projekt zum Aufbau einer Enzyklopädie aus freien Inhalten, zu denen du sehr gern beitragen kannst. Seit März 2001 sind 2.796.243 Artikel in deutscher Sprache entstanden."
+    }]
+  }],
+  "suites": [{
+    "id": "98cd0ffa-0692-4fb1-b74e-6d2024b8c774",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["67872924-37c3-49b0-9a09-f46965125a23"]
+  }],
+  "urls": ["https://www.wikipedia.org/"],
+  "plugins": []
+}
